@@ -47,7 +47,7 @@ public class JobTest {
     @Test
     public void testToString_returnsStringWithCorrectSpaces() {
         Job sJob = new Job();
-        String correctSpaces = "ID: " + sJob.getId() + " " + "\nName: " + sJob.getName() + " " + "\nEmployer: " + sJob.getEmployer() + " " +
+        String correctSpaces = "\nID: " + sJob.getId() + " " + "\nName: " + sJob.getName() + " " + "\nEmployer: " + sJob.getEmployer() + " " +
                 "\nLocation: " + sJob.getLocation() + " " + "\nPosition Type: " + sJob.getPositionType() + " " +
                 "\nCore Competency: " + sJob.getCoreCompetency() + " ";
         assertEquals(sJob.toString(), correctSpaces);
@@ -56,7 +56,7 @@ public class JobTest {
     @Test
     public void testToString_returnsStringWithLabelsAndData(){
         Job dJob = new Job();
-        assertEquals(dJob.toString(), ("ID: " + dJob.getId() + " " + "\nName: " + dJob.getName() + " " + "\nEmployer: " + dJob.getEmployer() + " " +
+        assertEquals(dJob.toString(), ("\nID: " + dJob.getId() + " " + "\nName: " + dJob.getName() + " " + "\nEmployer: " + dJob.getEmployer() + " " +
                 "\nLocation: " + dJob.getLocation() + " " + "\nPosition Type: " + dJob.getPositionType() + " " +
                 "\nCore Competency: " + dJob.getCoreCompetency() + " "));
     }
