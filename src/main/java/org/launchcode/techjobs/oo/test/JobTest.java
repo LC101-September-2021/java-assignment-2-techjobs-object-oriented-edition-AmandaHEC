@@ -5,6 +5,9 @@ import org.junit.runners.JUnit4;
 import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs.oo.*;
+
+import java.util.Objects;
+
 import static org.junit.Assert.*;
 
 /**
@@ -33,6 +36,7 @@ public class JobTest {
     }
     @Test
     public void testJobConstructorSetsAllFields(){
+        assertNotNull(jobThree.getName());
         assertNotNull(jobThree.getEmployer());
         assertNotNull(jobThree.getLocation());
         assertNotNull(jobThree.getPositionType());
@@ -40,8 +44,8 @@ public class JobTest {
     }
     @Test
     public void testJobsForEquality(){
-        assertNotEquals(jobOne, jobTwo);
-        assertNotEquals(jobOne, jobThree);
+        assertFalse(jobOne == jobTwo);
+        assertFalse(Objects.equals(jobTwo, jobThree));
 
     }
     @Test
