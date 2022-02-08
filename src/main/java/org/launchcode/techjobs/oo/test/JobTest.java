@@ -61,6 +61,9 @@ public class JobTest {
                 new PositionType("entry level"), new CoreCompetency("Java"));
 
         assertFalse(jobOne.equals(jobTwo));
+        assertTrue(jobOne.equals(jobOne));
+        assertFalse(jobOne.equals(jobTwo));
+        assertNotEquals(jobOne.getId(), jobTwo.getId());
 
 
     }
