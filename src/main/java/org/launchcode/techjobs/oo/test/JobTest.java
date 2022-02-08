@@ -55,15 +55,14 @@ public class JobTest {
     }
     @Test
     public void testJobsForEquality(){
-        jobOne = new Job("Dog walker", new Employer("Purina" ), new Location("St. Louis"),
+        jobOne = new Job("Cat walker", new Employer("PetCo" ), new Location("St. Louis"),
                 new PositionType("entry level"), new CoreCompetency("Java"));
         jobTwo = new Job("Cat walker", new Employer("PetCo" ), new Location("St. Louis"),
                 new PositionType("entry level"), new CoreCompetency("Java"));
-        assertEquals(false,jobOne.equals(jobTwo));
-        assertFalse(jobOne == jobTwo);
+
         assertFalse(jobOne.equals(jobTwo));
-        assertEquals(false, jobTwo.equals(jobOne));
-        assertTrue(jobOne.equals(jobOne));
+
+
     }
 //    @Test
 //    public void testEqualsMethod(){
