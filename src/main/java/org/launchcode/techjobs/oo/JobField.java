@@ -1,7 +1,7 @@
 package org.launchcode.techjobs.oo;
 
 public abstract class JobField {
-    private int id;
+    public int id;
     private static int nextId = 1;
     private String value;
 
@@ -28,9 +28,9 @@ public abstract class JobField {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public static int getNextId() {
         return nextId;
@@ -47,6 +47,6 @@ public abstract class JobField {
     public void setValue(String value) {
         this.value = value;
     }
-
+    //assertEquals(hashCodeMethod.invoke(job), hashCodeMethod.invoke(anotherJob));
 
 }

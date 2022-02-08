@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Location extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
+//    private int id;
+//    private static int nextId = 1;
+//    private String value;
 
 public Location(String value){
     super(value);
@@ -27,7 +27,10 @@ public Location(String value){
 //    public String toString() {
 //        return value;
 //    }
-
+@Override
+public int hashCode() {
+    return Objects.hash(getId());
+}
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,10 +39,7 @@ public Location(String value){
         return getId() == location.getId();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
+
 
     // Getters and Setters:
 
